@@ -1,14 +1,15 @@
-FROM node:6.10
+FROM node:6.10-alpine
 MAINTAINER Hardys <hardyscc@gmail.com>
 
-RUN apt-get update && \
-apt-get install python-dev -y && \
-apt-get clean
+RUN apk add --no-cache \
+    python \
+    py-pip \
+    ca-certificates \
+    groff \
+    less \
+    bash \
+  && pip install --no-cache-dir --upgrade pip awscli
 
-ENV SERVERLESS serverless@1.21.0
+RUN npm -g install serverless@1.22.0
 
-RUN npm install -g $SERVERLESS && \
-curl -O https://bootstrap.pypa.io/get-pip.py
-
-RUN python get-pip.py
-RUN pip install awscli
+ENTRYPOINT ["/bin/bash", "-c"]

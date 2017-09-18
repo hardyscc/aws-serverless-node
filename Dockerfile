@@ -1,4 +1,4 @@
-FROM node:6.10
+FROM node:6.10-alpine
 MAINTAINER Hardys <hardyscc@gmail.com>
 
 RUN apt-get update && \

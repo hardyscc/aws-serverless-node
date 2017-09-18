@@ -10,6 +10,6 @@ RUN apk add --no-cache \
     bash \
   && pip install --no-cache-dir --upgrade pip awscli
 
-RUN npm -g install npm serverless@1.22.0
+RUN yarn global add serverless@1.22.0
 
 ENTRYPOINT ["/bin/bash", "-c"]

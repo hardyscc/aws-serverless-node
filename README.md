@@ -1,1 +1,1 @@
-## Dockerfile for node 6.10, serverless & awscli
+## Dockerfile for node, serverless & awscli

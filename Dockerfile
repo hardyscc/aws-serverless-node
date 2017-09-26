@@ -12,4 +12,5 @@ RUN apk add --no-cache \
 
 RUN npm -g install serverless@1.23.0
 
-ENTRYPOINT ["/bin/bash", "-c"]
+WORKDIR /root
+CMD bash

@@ -10,7 +10,7 @@ RUN apk add --no-cache \
     bash \
   && pip install --no-cache-dir --upgrade pip awscli
 
-RUN npm -g install serverless@1.41.1
+RUN npm -g install npm serverless@1.41.1
 
 WORKDIR /root
 CMD bash

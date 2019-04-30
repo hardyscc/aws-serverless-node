@@ -1,4 +1,4 @@
-FROM node:6.10-alpine
+FROM node:8.10-alpine
 MAINTAINER Hardys <hardyscc@gmail.com>
 
 RUN apk add --no-cache \
@@ -10,7 +10,7 @@ RUN apk add --no-cache \
     bash \
   && pip install --no-cache-dir --upgrade pip awscli
 
-RUN npm -g install serverless@1.23.0
+RUN npm -g install serverless@1.41.1
 
 WORKDIR /root
 CMD bash
